@@ -12,4 +12,4 @@ function searchFriend(array, value) {
 }
 
 searchFriend(friends, lookingFor)
-console.log(searchFriend(friends, lookingFor));
+console.log(searchFriend(friends, lookingFor))
