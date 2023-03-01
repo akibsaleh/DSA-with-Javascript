@@ -2,14 +2,11 @@ const friends = ["muhammad", "abu-bakr", "omar", "uthman", "ali"]
 const lookingFor = "hurayra"
 
 function searchFriend(array, value) {
-    for(let i = 0; i < array.length; i++) {
-        if(value === array[i]) {
-            return "found the friend I was looking for"
-        }
-    }
+    for(let i = 0; i < array.length; i++)
+        if(value === array[i]) return "found the friend I was looking for"
     
     return "Couldn't find the friend"
 }
 
-searchFriend(friends, lookingFor)
 console.log(searchFriend(friends, lookingFor))
+
