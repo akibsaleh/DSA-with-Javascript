@@ -1,0 +1,29 @@
+const letters = ["x","x","y","y"];
+const target = "z" ;
+
+function searchInsert(letters, target) {
+    let start = 0;
+    let end = letters.length-1;
+    let mid;
+    while(start <= end) {
+        mid = Math.floor((start + end) / 2);
+        if(target === letters[mid]){ 
+            return letters[mid];
+        }
+        else if(target > letters[mid]) {
+            start = mid + 1;
+        }
+        else {
+            end = mid - 1 ;
+        }
+    }
+
+    if(target < letters[mid]) {
+        return letters[mid]
+    } else if(target > letters[mid]) {
+        return letters[0]
+    }
+    return letters[mid+1]
+}
+
+console.log(searchInsert(letters, target))
